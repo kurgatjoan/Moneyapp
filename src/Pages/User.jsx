@@ -39,7 +39,7 @@ export default function User() {
                 </ul>
                 <ul className="flex flex-row">
                 <li>Account Number: </li>
-                <li  className="ml-2 font-bold" > 0794789678</li>
+                <li  className="ml-2 font-bold" > 1212898</li>
                 </ul>
                 <ul className="flex flex-row">
                 <li  > Balance: </li>

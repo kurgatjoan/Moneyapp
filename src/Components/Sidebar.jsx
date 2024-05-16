@@ -19,35 +19,33 @@ export default function Sidebar() {
       <div className="flex font-serif text-white ">
         <div className='mt-1 '>
           <ul className="flex-col menu menu-md">
-            <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'  }`}>
+            <li className={`flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'  }`}>
               <div className='inline-block w-4 h-4 mt-2'>
                 <FaWallet />
               </div>
               <Link to="/" className='text-lg'> Wallet</Link>
             </li>
-            <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
+            <li className={`flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
               <div className='inline-block w-4 h-4 mt-2 '><FaRegPaperPlane /></div>
               <Link to="/send" className='text-lg'>Send </Link></li>
-            <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
+            <li className={`flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
               <div className='inline-block w-4 h-4 mt-2'><FaRegMoneyBillAlt /></div>
               <Link to="/withdraw " className='text-lg'>Withdraw</Link></li>
-            <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
+            <li className={`flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
               <div className='inline-block w-4 h-4 mt-2'><FaPeopleGroup /></div>
               <Link to="/groups" className='text-lg'>Groups</Link></li>
           </ul>
         </div>
         <div className={`absolute bottom-0 left-0 ${isOpen ? '' : 'hidden'}`} >
-          <ul className="flex-col menu menu-md">
-            <li className="flex flex-row duration-500 hover:text-black">
+          <ul className=" menu menu-md">
+            <li className="flex-row duration-500 hover:text-black">
               <div className='inline-block w-4 h-4 mt-2'><FaTools /></div>
               <Link to="/settings" className='text-lg'>Settings</Link></li>
-            <div className="  w-32 ml-0 h-0.5 divider"></div>
-            <li className="mb-10 duration-500 hover:text-black">
-              <div className='flex flex-row'>
-                <div className='inline-block w-4 h-4 '>
+              <div className="divide-gray-300 divider"></div>
+            <li className="flex-row mb-10 duration-500 hover:text-black">
+              <div className='inline-block w-4 h-4 mt-2 '>
                   <FaUserCircle /></div>
-                <Link to="/user" className='ml-2 text-lg'>User </Link>
-              </div>
+                <Link to="/user" className='text-lg '>User </Link>           
             </li>
           </ul>
         </div>
