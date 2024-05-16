@@ -79,12 +79,12 @@ const Wallet = () => {
               <h1>Your balance is KSH. {balance.toLocaleString()}</h1> 
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-4 mt-4 sm:w-48">
+          <div className="flex flex-col justify-center w-full px-4 mt-6 sm:w-48">
             <div className="p-4 font-bold text-black bg-blue-200 shadow-lg text-pretty card">
               <h1>Send Money</h1>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-4 mt-4 sm:w-48">
+          <div className="justify-center w-full px-4 mt-6 sm:w-52">
             <div className="p-4 font-bold text-black bg-blue-200 shadow-lg text-pretty card">
               <h1>Withdraw Money</h1>
             </div>

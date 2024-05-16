@@ -11,7 +11,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className={`bg-blue-950 h-lvh ${isOpen ? 'w-42' : 'w-16'}`}>
+    <div className={`bg-blue-950 h-lvh ${isOpen ? 'w-52' : 'w-16'}`}>
       <header className={`flex p-4 mt-0 text-2xl font-bold text-white ${isOpen ? '' : 'hidden'}`} >
         <img src="https://api.domatron.com/storage/icons/f9d341/si.svg" alt="Afflixe icon" className="w-8 h-8 svelte-zd96s" />
         <span>Afflixe</span>
@@ -27,7 +27,7 @@ export default function Sidebar() {
             </li>
             <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
               <div className='inline-block w-4 h-4 mt-2 '><FaRegPaperPlane /></div>
-              <Link to="/send" className='text-lg'>Send Cash</Link></li>
+              <Link to="/send" className='text-lg'>Send </Link></li>
             <li className={`flex flex-row p-0.5 duration-500 hover:text-black ${isOpen ? '' : 'hidden'}`}>
               <div className='inline-block w-4 h-4 mt-2'><FaRegMoneyBillAlt /></div>
               <Link to="/withdraw " className='text-lg'>Withdraw</Link></li>

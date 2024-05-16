@@ -189,13 +189,13 @@ const Send = () => {
           </div>
         </div>
         <div className="grid md:flex-row">
-          <div className="flex flex-row p-2 font-bold text-black bg-blue-200 shadow-lg text-pretty md:mt-1 md:text-m card md:w-96">
+          <div className="flex flex-row p-2 font-bold text-black bg-blue-200 shadow-lg text-pretty md:mt-0 md:text-m card md:w-96">
             <div className="flex p-2 card-body"> 
               <h1>Balance</h1>
-              <h2>KSH. {balance.toLocaleString()}</h2>
+              <h2>KES. {balance.toLocaleString()}</h2>
             </div>
           </div>
-          <div className="flex flex-row mt-2 md:ml-36">
+          <div className="flex flex-row mt-2 md:ml-0">
             <h3 className="mt-2 text-xl font-bold text-black text-pretty">Choose Recipient</h3>
           </div>
         </div>
@@ -223,19 +223,21 @@ const Send = () => {
   ))}
     </tbody>
             </table>
-            <button className="mt-4 text-black bg-blue-200 border-none btn ml-7" onClick={handleAddContact}>Add Contact</button>
+            <button className="mt-4 text-black bg-blue-200 border-none btn" onClick={handleAddContact}>Add Contact</button>
           </div>
-          <div className="grid md:ml-6"> 
+          <div className="grid md:ml-10"> 
             <form className="mt-2" onSubmit={handleSendMoney}>
-              <label className="grid ml-20 text-lg font-bold text-black">Send</label>
-              <input type="text" value={amountToSend} onChange={(e) => setAmountToSend(e.target.value)} placeholder="KSH." className="mt-4 ml-0 text-white input input-bordered bg-blue-950" />
+              <label className="grid text-lg font-bold text-black">Send</label>
+              <input type="text" value={amountToSend} onChange={(e) => setAmountToSend(e.target.value)} placeholder="KES." className="mt-2 ml-0 text-white input input-bordered bg-blue-950" />
+              <div className='flex flex-row mt-2 '>
               <Dropdown options={currencies} onChange={(e) => setFromCurrency(e.value)} value={fromCurrency} placeholder="From" />
-              <Dropdown options={currencies} onChange={(e) => setToCurrency(e.value)} value={toCurrency} placeholder="To" />
+              <Dropdown options={currencies} onChange={(e) => setToCurrency(e.value)} value={toCurrency} placeholder="To" className='ml-2'/>
+              </div>
               <div className='flex flex-row'>
-              <button type="button" className="mt-3 ml-12 text-black bg-blue-200 border-none rounded-full btn" onClick={convertCurrency}>
+              <button type="button" className="mt-2 text-black bg-blue-200 border-none btn" onClick={convertCurrency}>
                 Convert
               </button>
-              <button type="submit" className="mt-3 ml-12 text-black bg-blue-200 border-none rounded-full btn">
+              <button type="submit" className="mt-2 ml-4 text-black bg-blue-200 border-none btn">
                 Send Money
               </button>
               </div>

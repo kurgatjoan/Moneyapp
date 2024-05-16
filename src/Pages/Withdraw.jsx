@@ -67,7 +67,7 @@ const Withdraw = () => {
           
         }); 
 
-        alert(`Transaction successful! ${withdrawAmount} KSH withdrawn.\nTransaction cost: ${transactionCost} KSH`);
+        alert(`Transaction successful! ${withdrawAmount} KES withdrawn.\nTransaction cost: ${transactionCost} KES`);
         setAmountToWithdraw('');
       } else {
         alert("Invalid amount or insufficient balance.");
@@ -109,14 +109,14 @@ const Withdraw = () => {
         <div className="flex flex-row p-2 font-bold text-black bg-blue-200 shadow-lg text-pretty md:mt-1 md:text-m card md:w-96">
             <div className="flex p-2 card-body"> 
               <h1>Balance</h1>
-              <h2>KSH. {balance.toLocaleString()}</h2>
+              <h2>KES. {balance.toLocaleString()}</h2>
             </div>
           </div>
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:w-96">
             <form className="grid mt-4 grid-row-3" onSubmit={handleWithdrawMoney}>
               <label className="text-lg font-bold text-black">Enter Amount</label>
-              <input type="text" value={amountToWithdraw} onChange={(e) => setAmountToWithdraw(e.target.value)} placeholder="KSH." className="text-white input input-bordered bg-blue bg-blue-950" />
-              <button type="submit" className="mt-5 text-black bg-blue-200 border-none rounded-full btn">
+              <input type="text" value={amountToWithdraw} onChange={(e) => setAmountToWithdraw(e.target.value)} placeholder="KES." className="text-white input input-bordered bg-blue bg-blue-950" />
+              <button type="submit" className="mt-5 text-black bg-blue-200 border-none btn">
                 Withdraw Money
               </button>
             </form>
