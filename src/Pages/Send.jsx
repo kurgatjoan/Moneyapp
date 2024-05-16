@@ -22,7 +22,7 @@ const Send = () => {
   useEffect(() => {
     const initializeUser = async () => {
       try {
-        const userRef = doc(db, 'users', 'userId'); // Assuming a static user ID for simplicity
+        const userRef = doc(db, 'users', 'userId'); 
         const userSnap = await getDoc(userRef);
 
         if (!userSnap.exists()) {
@@ -52,7 +52,7 @@ const Send = () => {
 
     const fetchCurrencies = async () => {
       try {
-        const response = await Axios.get('https://open.er-api.com/v6/latest/USD'); // Correct API endpoint
+        const response = await Axios.get('https://open.er-api.com/v6/latest/USD'); 
         const rates = response.data.rates;
         setCurrencies(Object.keys(rates));
       } catch (error) {

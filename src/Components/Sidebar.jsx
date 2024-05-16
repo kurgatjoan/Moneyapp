@@ -4,7 +4,7 @@ import { FaPeopleGroup } from "react-icons/fa6"
 import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true); // Initial state: sidebar is open
+  const [isOpen, setIsOpen] = useState(true); // Initial state: sidebar open
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);

@@ -11,7 +11,7 @@ const Wallet = () => {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const balanceDoc = await getDoc(doc(db, 'users', 'userId')); // Assuming you have a 'users' collection and the user document ID is 'userId'
+        const balanceDoc = await getDoc(doc(db, 'users', 'userId')); 
         if (balanceDoc.exists()) {
           const userData = balanceDoc.data();
           setBalance(userData.balance);
