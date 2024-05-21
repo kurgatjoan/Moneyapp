@@ -22,7 +22,7 @@ const Send = () => {
   useEffect(() => {
     const initializeUser = async () => {
       try {
-        const userRef = doc(db, 'users', 'userId'); 
+        const userRef = doc(db, 'users', 'userId'); // Assuming a static user ID for simplicity
         const userSnap = await getDoc(userRef);
 
         if (!userSnap.exists()) {
@@ -52,7 +52,7 @@ const Send = () => {
 
     const fetchCurrencies = async () => {
       try {
-        const response = await Axios.get('https://open.er-api.com/v6/latest/USD'); 
+        const response = await Axios.get('https://open.er-api.com/v6/latest/USD'); // Correct API endpoint
         const rates = response.data.rates;
         setCurrencies(Object.keys(rates));
       } catch (error) {
@@ -190,42 +190,42 @@ const Send = () => {
         </div>
         <div className="grid md:flex-row">
           <div className="flex flex-row p-2 font-bold text-black bg-blue-200 shadow-lg text-pretty md:mt-0 md:text-m card md:w-96">
-            <div className="flex p-2 card-body"> 
+            <div className="flex p-1 card-body"> 
               <h1>Balance</h1>
               <h2>KES. {balance.toLocaleString()}</h2>
             </div>
           </div>
-          <div className="flex flex-row mt-2 md:ml-0">
-            <h3 className="mt-2 text-xl font-bold text-black text-pretty">Choose Recipient</h3>
+          <div className="flex flex-row mt-1 md:ml-0">
+            <h3 className="mt-1 text-xl font-bold text-black text-pretty">Choose Recipient</h3>
           </div>
         </div>
-        <div className="flex flex-col mt-4 md:flex-row">
-        <div >
-  <table className="table">
-    <thead>
-      <tr>
-      <th>First Name</th>
-      <th>Surname</th>
-      <th>Account Number</th>
-      <th>Select</th>
-      <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-    {contacts.map((contact, index) => (
-    <tr key={index}>
-      <td><input type="text" value={contact.fname} onChange={(e) => handleContactChange(index, 'fname', e.target.value)} /></td>
-      <td><input type="text" value={contact.surname} onChange={(e) => handleContactChange(index, 'surname', e.target.value)} /></td>
-      <td><input type="text" value={contact.accountNumber} onChange={(e) => handleContactChange(index, 'accountNumber', e.target.value)} /></td>
-      <td><input type="checkbox" checked={contact.selected} onChange={(e) => handleContactChange(index, 'selected', e.target.checked)} /></td>
-      <td><button onClick={() => handleDeleteContact(contact.id)}>Delete</button></td>
-    </tr>
-  ))}
-    </tbody>
+        <div className="flex flex-col mt-2 md:flex-row">
+        <div className='overflow-x-auto text-lg text-black'>
+          <table className="table table-xs table-pin-rows table-pin-cols">
+            <thead>
+              <tr>
+              <th>First Name</th>
+              <th>Surname</th>
+              <th>Account Number</th>
+              <th>Select</th>
+              <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+            {contacts.map((contact, index) => (
+            <tr key={index}>
+              <td><input type="text" value={contact.fname} onChange={(e) => handleContactChange(index, 'fname', e.target.value)} /></td>
+              <td><input type="text" value={contact.surname} onChange={(e) => handleContactChange(index, 'surname', e.target.value)} /></td>
+              <td><input type="text" value={contact.accountNumber} onChange={(e) => handleContactChange(index, 'accountNumber', e.target.value)} /></td>
+              <td><input type="checkbox" checked={contact.selected} onChange={(e) => handleContactChange(index, 'selected', e.target.checked)} /></td>
+              <td><button onClick={() => handleDeleteContact(contact.id)}>Delete</button></td>
+            </tr>
+          ))}
+            </tbody>
             </table>
             <button className="mt-4 text-black bg-blue-200 border-none btn" onClick={handleAddContact}>Add Contact</button>
           </div>
-          <div className="grid md:ml-10"> 
+          <div className="grid md:ml-24"> 
             <form className="mt-2" onSubmit={handleSendMoney}>
               <label className="grid text-lg font-bold text-black">Send</label>
               <input type="text" value={amountToSend} onChange={(e) => setAmountToSend(e.target.value)} placeholder="KES." className="mt-2 ml-0 text-white input input-bordered bg-blue-950" />

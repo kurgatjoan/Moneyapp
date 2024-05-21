@@ -49,8 +49,8 @@ const Wallet = () => {
 
 
   return (
-    <div className='bg-gray-300'>
-      <div className="px-4 py-0 bg-gray-300 sm:px-6 lg:px-8 ">
+    <div>
+      <div className="h-screen px-4 py-0 bg-gray-300 sm:px-6 lg:px-8 ">
       <div className="mx-auto max-w-8xl">
         <div className="flex justify-between mb-6 items-left ">
           <div className="grid">
@@ -90,9 +90,9 @@ const Wallet = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-end mt-2">
-          <label className="flex items-center gap-2 input input-bordered">
-            <input type="text" className="grow" placeholder="Search" />
+        <div className="flex justify-end mt-2 ">
+          <label className="flex items-center gap-2 text-white input input-bordered bg-blue-950 sm-w-48">
+            <input type="text" className="" placeholder="Search" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
           </label>
         </div>

@@ -3,14 +3,14 @@
 
 export default function Groups() {
     return (
-      <div className="flex flex-col h-screen bg-gray-300">
-    <div className="ml-7 ">
-         <div className="flex flex-row justify-between bg-gray-300s text-cyan-700 navbar">
-    <div className="grid">
-            <h3 className="text-4xl font-bold text-black text-pretty ">Groups</h3>
-            <p className="text-sm text-pretty text-cyan-700"> Manage your money with ease </p>
+      <div className="h-screen px-4 py-0 bg-gray-300 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-8xl ">
+    <div className="flex justify-between mb-6 items-left">
+          <div className="grid">
+            <h3 className="font-serif text-3xl font-bold text-black text-pretty ">Groups</h3>
+            <p className="text-sm text-pretty text-blue-950"> Manage your money with ease </p>
           </div>
-          <div className="flex items-center font-semibold text-m">
+          <div className="flex items-center ">
             Help
             <div className="dropdown dropdown-end">
               <button tabIndex={0} className="btn btn-circle btn-ghost btn-xs text-info ">
@@ -23,10 +23,9 @@ export default function Groups() {
                 </div>
               </div>
             </div>
-            </div>
-
-    </div>
-    <div className="ml-2">
+          </div>
+        </div>
+    <div >
         <h3 className="text-black">Create groups at your convenience</h3>
     <button className="mt-4 text-black bg-blue-200 border-none btn btn-xs sm:btn-sm md:btn-md" >
                   Create Group

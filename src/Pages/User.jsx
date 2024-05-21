@@ -2,13 +2,14 @@
 
 export default function User() {
     return (
-    <div className="bg-gray-300">
-         <div className="flex flex-row justify-between text-cyan-700 navbar">
-    <div className="grid">
-            <h3 className="ml-6 text-4xl font-bold text-black text-pretty ">User</h3>
-            <p className="ml-6 text-sm text-pretty text-cyan-700"> Manage your money with ease </p>
+      <div className="h-screen px-4 py-0 bg-gray-300 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-8xl">
+        <div className="flex justify-between mb-6 items-left">
+          <div className="grid">
+            <h3 className="font-serif text-3xl font-bold text-black text-pretty ">User</h3>
+            <p className="text-sm text-pretty text-blue-950"> Manage your money with ease </p>
           </div>
-          <div className="flex items-center font-semibold text-m">
+          <div className="flex items-center ">
             Help
             <div className="dropdown dropdown-end">
               <button tabIndex={0} className="btn btn-circle btn-ghost btn-xs text-info ">
@@ -21,12 +22,11 @@ export default function User() {
                 </div>
               </div>
             </div>
-            </div>
-
-    </div>
+          </div>
+        </div>
     <div>
         
-          <div className="flex font-sans text-black ml-7 text-m" >
+          <div className="flex font-sans text-black text-m" >
             <div>
             <ul>
                 <ul className="flex flex-row">
@@ -42,15 +42,16 @@ export default function User() {
                 <li  className="ml-2 font-bold" > 1212898</li>
                 </ul>
                 <ul className="flex flex-row">
-                <li  > Balance: </li>
+                <li> Balance: </li>
                 <li className="ml-2 font-bold" id= "Balance">50,000</li>
                 </ul>
-             
-                
             </ul>
             </div>
         </div>
         </div>
         </div>
+
+      </div>
+    
     )
 }

@@ -51,14 +51,14 @@ const Withdraw = () => {
         
         setBalance(newBalance);
         setTotalWithdraw(newTotalWithdraw);
-        await setDoc(doc(db, 'users', 'userId'), { balance: newBalance, firstname :"Andrew", lastname :"Evans" });
+        await setDoc(doc(db, 'users', 'userId'), { balance: newBalance, firstname :"Andrew ", lastname :"Evans " });
 
         const transactionRef = collection(db, 'Transactions');
 
         await addDoc(transactionRef, {
-          firstname: 'Andrew',
-          lastname: 'Evans',
-          type: 'withdrawal',
+          firstname: ' Andrew',
+          lastname: 'Evans ',
+          type: 'withdraw ',
           accountNumber: '1212898',
           amount: withdrawAmount,
           transactionCost: transactionCost,
@@ -81,18 +81,16 @@ const Withdraw = () => {
     <div className="px-4 py-0 bg-gray-300 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-8xl ">
         {/* Navbar */}
-        <div className="flex flex-row justify-between w-full bg-gray-300 text-blue-950 navbar">
+        <div className="flex justify-between mb-6 items-left">
           <div className="grid">
-            <h3 className="font-serif text-3xl font-bold text-black text-pretty">Withdraw Cash</h3>
-            <p className="text-sm text-pretty">Manage your money with ease</p>
+            <h3 className="font-serif text-3xl font-bold text-black text-pretty ">Withraw Cash</h3>
+            <p className="text-sm text-pretty text-blue-950"> Manage your money with ease </p>
           </div>
-          <div className="flex items-center font-semibold text-m">
+          <div className="flex items-center ">
             Help
             <div className="dropdown dropdown-end">
-              <button tabIndex={0} className="btn btn-circle btn-ghost btn-xs text-info">
-                <svg tabIndex={0} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+              <button tabIndex={0} className="btn btn-circle btn-ghost btn-xs text-info ">
+                <svg tabIndex={0} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </button>
               <div tabIndex={0} className="card compact dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
                 <div tabIndex={0} className="card-body">
@@ -105,7 +103,12 @@ const Withdraw = () => {
         </div>
 
         {/* Main content */}
-        <div className="flex flex-col w-full mt-2 ml-2 items-left">
+        <div className="flex flex-col w-full mt-2\
+        
+        
+        
+        
+        items-left">
         <div className="flex flex-row p-2 font-bold text-black bg-blue-200 shadow-lg text-pretty md:mt-1 md:text-m card md:w-96">
             <div className="flex p-2 card-body"> 
               <h1>Balance</h1>

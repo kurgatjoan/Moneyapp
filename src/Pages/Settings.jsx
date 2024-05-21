@@ -2,13 +2,14 @@
 
 export default function Settings() {
     return (
-    <div className="bg-gray-300">
-         <div className="flex flex-row justify-between text-cyan-700 navbar">
-    <div className="grid">
-            <h3 className="ml-6 text-4xl font-bold text-black text-pretty ">Settings</h3>
-            <p className="ml-6 text-sm text-pretty text-cyan-700"> Manage your money with ease </p>
+      <div className="h-screen px-4 py-0 bg-gray-300 sm:px-6 lg:px-8">
+         <div className="mx-auto max-w-8xl">
+        <div className="flex justify-between mb-6 items-left">
+          <div className="grid">
+            <h3 className="font-serif text-3xl font-bold text-black text-pretty ">Settings</h3>
+            <p className="text-sm text-pretty text-blue-950"> Manage your money with ease </p>
           </div>
-          <div className="flex items-center font-semibold text-m">
+          <div className="flex items-center ">
             Help
             <div className="dropdown dropdown-end">
               <button tabIndex={0} className="btn btn-circle btn-ghost btn-xs text-info ">
@@ -21,15 +22,16 @@ export default function Settings() {
                 </div>
               </div>
             </div>
-            </div>
-            
-
-    </div>
-    <div className="flex ml-7">
+          </div>
+        </div>
+    <div className="flex">
             <h3 className="text-xl font-bold text-black text-pretty ">Themes</h3>
             <input type="checkbox" value="synthwave" className="h-6 mt-1 ml-4 toggle theme-controller"/>
             </div>
 
         </div>
+
+      </div>
+   
     )
 }
